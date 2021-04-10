@@ -47,10 +47,11 @@ export function addToCart(){
 }
 
 export function navigateToComputerSite(){
-    params.tags = {type: "computerSite"}
+    params.tags = {type: "navigateToComputerSite"}
     makeGetCall(`${config.computerSiteBaseUrl}`, params)
 }
 
 export function getComputers(computerId: string){
-    makeGetCall(`${config.computerSiteBaseUrl}/${computerId}`)
+    params.tags = {type: "getComputers"}
+    makeGetCall(`${config.computerSiteBaseUrl}/${computerId}`, params)
 }

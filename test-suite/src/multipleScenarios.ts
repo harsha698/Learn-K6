@@ -35,9 +35,10 @@ export const options = {
         checks: ['rate>=1'],
         'http_req_duration{type:loginCuraHealthService}': ['p(95)<1000'],
         'http_req_duration{type:makeAppointment}': ['p(95)<1000'],
-        'http_req_duration{type: navigateToWordpress}': ['p(95)<2000'],
-        'http_req_duration{type: addToCart}': ['p(95)<2000'],
-        'http_req_duration{type:ddd}':['p(95)<1000']
+        'http_req_duration{type:navigateToWordpress}': ['p(95)<2000'],
+        'http_req_duration{type:addToCart}': ['p(95)<2000'],
+        'http_req_duration{type:navigateToComputerSite}':['p(95)<1000'],
+        'http_req_duration{type:getComputers}':['p(95)<2000']
     }
 
 }
