@@ -4,7 +4,7 @@
 - Node js and npm installed
 - K6 installed
 
-###Steps to run
+### Steps to run
 
 - `cd <this project>`
 - `cd test-suite`
