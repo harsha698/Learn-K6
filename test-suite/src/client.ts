@@ -41,7 +41,7 @@ export function addToCart(){
     for(let i=1; i<=4; i++){
         let productId = 35
         const body = JSON.stringify(`product_sku=&product_id=${productId.toString()}&quantity=1`)
-        http.post(`${config.wordPressbaseUrl}?wc-ajax=add_to_cart`, body, params)
+        makePostCall(`${config.wordPressbaseUrl}?wc-ajax=add_to_cart`, body, params)
         productId++
     }
 }
