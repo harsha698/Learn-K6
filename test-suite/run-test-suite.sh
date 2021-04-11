@@ -9,4 +9,4 @@ npm run build
 k6 run \
   --compatibility-mode=base \
   $K6_PARAMS \
-  compiledCode/test2.js
+  compiledCode/multipleScenarios.js

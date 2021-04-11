@@ -6,7 +6,6 @@ function checkIfApiIsSuccessful(response:RefinedResponse<any>){
     if(response.status>=400){
         fail(`${response.request.method} - ${response.request.url} request failed with status code ${response.status}`)
     }
-
 }
 export function makeGetCall(url:string, params?:{}):void{
     const response = http.get(url, params)

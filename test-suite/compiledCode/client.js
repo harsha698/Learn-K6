@@ -63,17 +63,18 @@ function addToCart() {
     for (var i = 1; i <= 4; i++) {
         var productId = 35;
         var body = JSON.stringify("product_sku=&product_id=" + productId.toString() + "&quantity=1");
-        http_1.default.post(config.wordPressbaseUrl + "?wc-ajax=add_to_cart", body, params);
+        requestHelper_js_1.makePostCall(config.wordPressbaseUrl + "?wc-ajax=add_to_cart", body, params);
         productId++;
     }
 }
 exports.addToCart = addToCart;
 function navigateToComputerSite() {
-    params.tags = { type: "computerSite" };
+    params.tags = { type: "navigateToComputerSite" };
     requestHelper_js_1.makeGetCall("" + config.computerSiteBaseUrl, params);
 }
 exports.navigateToComputerSite = navigateToComputerSite;
 function getComputers(computerId) {
-    requestHelper_js_1.makeGetCall(config.computerSiteBaseUrl + "/" + computerId);
+    params.tags = { type: "getComputers" };
+    requestHelper_js_1.makeGetCall(config.computerSiteBaseUrl + "/" + computerId, params);
 }
 exports.getComputers = getComputers;
